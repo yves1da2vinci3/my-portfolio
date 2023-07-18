@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React, { FC } from 'react'
-import pro from '../public/yvesDaVinci (1).png'
+import pro from '../public/yvesDaVinci2.png'
 interface ProjectItemProp {
     
     setShow  : Function,

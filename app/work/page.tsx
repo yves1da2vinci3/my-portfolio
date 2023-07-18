@@ -6,7 +6,7 @@ import {IoChevronBackCircleOutline} from 'react-icons/io5'
 import {BiWorld} from 'react-icons/bi'
 import {AiFillGithub} from 'react-icons/ai'
 import React, { useEffect, useState } from 'react'
-import pro from '../../public/yvesDaVinci (1).png'
+import pro from '../../public/yvesDaVinci2.png'
 function Page() {
   const types = [
     {
