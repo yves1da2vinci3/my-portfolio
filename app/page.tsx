@@ -9,13 +9,60 @@ import circle from '../public/circle3-yellow.svg'
 import wave from '../public/wave-green.svg'
 import dots from '../public/dots3-blue.svg'
 import wave2 from '../public/wave.svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { motion } from "framer-motion"
+import { useInView } from 'react-intersection-observer';
 export default function Home() {
   const [show,setShow] = useState(false)
   const Toggle = () => { 
     setShow(!show)
    }
+   const [animate1,setAnimate1] = useState(false)
+   const [animate2,setAnimate2] = useState(false)
+   const [animate3,setAnimate3] = useState(false)
+   const [animate4,setAnimate4] = useState(false)
+   const [ref1, inView1] = useInView({
+    triggerOnce: false, // Trigger the animation only once
+    threshold: 0.3, // Define the visibility threshold
+  });
+   const [ref2, inView2] = useInView({
+    
+    triggerOnce: false, // Trigger the animation only once
+    threshold: 0.3, // Define the visibility threshold
+  });
+   const [ref3, inView3] = useInView({
+    triggerOnce: false, // Trigger the animation only once
+    threshold: 0.3, // Define the visibility threshold
+  });
+   const [ref4, inView4] = useInView({
+    triggerOnce: false, // Trigger the animation only once
+    threshold: 0.3, // Define the visibility threshold
+  });
+
+  useEffect(() => {
+    if (inView1) {
+      setAnimate1(true);
+    }
+  }, [inView1]);
+
+  useEffect(() => {
+    if (inView2) {
+      setAnimate2(true);
+    }
+  }, [inView2]);
+
+  useEffect(() => {
+    if (inView3) {
+      setAnimate3(true);
+    }
+  }, [inView3]);
+  useEffect(() => {
+    if (inView4) {
+      setAnimate4(true);
+    }
+  }, [inView4]);
+
   return (
     <main className="flex h-auto flex-col relative overflow-x-hidden flex-1 bg-white  p-2">
       {/* Menu */}
@@ -41,7 +88,7 @@ export default function Home() {
              </ul>
             </div>
       {/* Fab for porject */}
-      <Link href="/work" className="flex h-12 fixed cursor-pointer bottom-10 right-8 bg-white w-48 items-center justify-center border border-coolGray-400 rounded-2xl">
+      <Link href="/work" className="flex z-50 h-12 fixed cursor-pointer bottom-10 right-8 bg-white w-48 items-center justify-center border border-coolGray-400 rounded-2xl">
              <p className='font-semibold' >Voir mes travaux</p>
              <BsArrowRightShort size={35} />
             </Link>
@@ -57,9 +104,19 @@ export default function Home() {
        </div>
      </nav>
      {/* Informations and image */}
-     <div className='flex-1 mt-5 flex flex-col md:grid md:grid-cols-2'>
+     <div ref={ref1} className='flex-1 mt-5 flex flex-col md:grid md:grid-cols-2'>
       {/* Information */}
-      <div className=' relative p-3  gap-4 flex-col flex justify-center'>
+      
+        
+      <motion.div initial={{ scale: 0 }}
+  animate={animate1 ? { rotate: 0, scale: 1 } : {}}
+  transition={{
+    duration : 2,
+    type: "spring",
+    
+    stiffness: 260,
+    damping: 20
+  }} className=' relative p-3  gap-4 flex-col flex justify-center'>
         <div className='gap-3 flex pl-8 flex-col self-center w-full '>
         <h1 className='text-5xl font-bold '>Bonjour,</h1>
        <h1 className='text-5xl font-bold '>Je suis <span className='text-blue-500'>Yves Lionel Diomande</span></h1>
@@ -78,46 +135,63 @@ export default function Home() {
         <AiFillLinkedin size={30} color='black' className='cursor-pointer' />
         <AiFillGithub size={30} color='black' className='cursor-pointer' />
        </div>
-      </div>
+      </motion.div>
+      
       {/* image */}
-      <div className='items-center flex justify-center'>
+      <motion.div initial={{ scale: 0 }}
+  animate={animate1 ? { rotate: 0, scale: 1 } : {}}
+  transition={{
+    type: "spring",
+    
+    duration : 2,
+    stiffness: 260,
+    damping: 20
+  }} className='items-center flex justify-center'>
         <div className='h-[35rem] w-[35rem] '>
           <Image  src={profileImg} alt='yveslioneldiomande' />
         </div>
-      </div>
+      </motion.div>
      </div>
      </div>
      {/* About */}
-     <div className='min-h-screen md:grid flex flex-col  p-4 gap-y-20 justify-evenly md:grid-cols-2 bg-[#F9F9F9]'>
+     <div ref={ref2} className='min-h-screen md:grid flex flex-col  p-4 gap-y-20 justify-evenly md:grid-cols-2 bg-[#F9F9F9]'>
       {/* Design */}
        <div className=' flex md:grid md:grid-rows-2  items-center justify-center'>
         <div className='self-center flex-col w-[30rem] flex gap-y-4' >
-        <h1 className='text-6xl font-semibold text-blue-500'>Design</h1>
-        <p className='tracker-tighter'>m probably not the typical designer positioned behind an Illustrator artboard adjusting pixels, but I design. Immersed in stylesheets tweaking font sizes and contemplating layouts is where ll find me  m committed to creating fluent user experiences while staying fashionable.</p>
+        <motion.h1 initial={{ opacity : 0, translateY : -120 }} animate={ animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2}} className='text-6xl font-semibold text-blue-500'>Design</motion.h1>
+        <motion.p initial={{ opacity : 0, translateY : 140 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }} className='tracker-tighter'>m probably not the typical designer positioned behind an Illustrator artboard adjusting pixels, but I design. Immersed in stylesheets tweaking font sizes and contemplating layouts is where ll find me  m committed to creating fluent user experiences while staying fashionable.</motion.p>
        </div>
        {/* Image */}
-       <div className=' md:flex hidden gap-x-4'>
+       <motion.div initial={{ translateX : -133 }} 
+       transition={{ duration : 2}}
+       animate={animate2 ?  { translateX : 0} : {}} 
+        className=' md:flex hidden gap-x-4'>
         <Image height={150} width={150} alt='circle' src={circle} />
         <Image height={150} width={150} alt='dots' src={dots} />
-       </div>
+       </motion.div>
         </div>
        {/* Engeneer */}
        <div className=' flex md:grid md:grid-rows-2  items-center justify-center'>
-       <div className='md:flex hidden gap-x-4 '>
+       <motion.div initial={{ translateX : 133 }} 
+       transition={{ duration : 2}}
+       animate={animate2 ?  { translateX : 0} : {}}  className='md:flex hidden gap-x-4 '>
        <Image height={200} width={200} alt='wavw' src={wave} />
        <Image height={200} width={200} alt='wavw' src={wave2} />
 
-       </div>
+       </motion.div>
 
         <div className='self-center flex-col w-[30rem] flex gap-y-4' >
-        <h1 className='text-6xl font-semibold text-blue-500'>Engeenering</h1>
-        <p className='tracker-tighter'>In building JavaScript applications, I am equipped with just the right tools, and can absolutely function independently of them to deliver fast, resilient solutions optimized for scale — performance and scalabilty are priorities on my radar.</p>
+        <motion.h1 initial={{ opacity : 0, translateY : 110 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }} className='text-6xl font-semibold text-blue-500'>Engeenering</motion.h1>
+        <motion.p initial={{ opacity : 0, translateY : -130 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }}  className='tracker-tighter'>In building JavaScript applications, I am equipped with just the right tools, and can absolutely function independently of them to deliver fast, resilient solutions optimized for scale — performance and scalabilty are priorities on my radar.</motion.p>
        </div>
        {/* Image */}
         </div>
      </div>
      {/* Footer */}
-     <section className="py-12 md:py-20 bg-coolGray-50">
+     <motion.section ref={ref3} initial={{ opacity : 0, translateY : 100 }} animate={animate3 ? { opacity : 1 ,translateY : 0} : {}} transition={{ 
+      duration : 2,
+     
+     }} className="py-12 md:py-20 bg-coolGray-50">
   <div className="container mx-auto px-4">
     <div className="flex flex-wrap -mx-4">
       <div className="w-full lg:w-1/2 xl:w-5/12 px-4 mb-16 lg:mb-0">
@@ -315,9 +389,12 @@ export default function Home() {
       </div>
     </div>
   </div>
-</section>
+</motion.section>
 {/* Footer */}
-<section
+<motion.section
+ref={ref4}
+initial={{ opacity : 0, translateY : 100 }} animate={animate4 ?  { opacity : 1 ,translateY : 0} : {}} transition={{ duration : 2 }}
+      
   className="bg-white"
   style={{
     backgroundImage: `url(${pro})`,
@@ -381,7 +458,7 @@ export default function Home() {
       © 2023 Yves Lionel Diomande. Touts droits reservé .
     </p>
   </div>
-</section>
+</motion.section>
 
     </main>
   )

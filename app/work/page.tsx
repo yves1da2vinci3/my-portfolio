@@ -4,9 +4,11 @@ import Image from 'next/image'
 import {HiOutlineExternalLink} from 'react-icons/hi'
 import {IoChevronBackCircleOutline} from 'react-icons/io5'
 import {BiWorld} from 'react-icons/bi'
-import {AiFillGithub} from 'react-icons/ai'
+import {AiFillGithub, AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import React, { useEffect, useState } from 'react'
+import LogoImg from '../../public/yvesDaVinci.png'
 import pro from '../../public/yvesDaVinci2.png'
+import Link from 'next/link'
 function Page() {
   const types = [
     {
@@ -50,8 +52,24 @@ function Page() {
       setAnimtation(true)
     },100)
    }
+   const [Navshow,setNavShow] = useState(false)
+  const Toggle = () => { 
+    setNavShow(!Navshow)
+   }
   return (
-    <div className={` ${show ?"h-screen" : "h-auto"} overflow-hidden  relative flex flex-col items-center `}>
+    <div className={` ${show ?"h-screen" : "h-auto"} px-3 overflow-hidden  relative flex flex-col items-center `}>
+        <nav className='h-[5rem] bg-blue-500 w-full mt-3 flex rounded-lg flex-row justify-between items-center px-4'>
+          <Link href="/">
+     <Image  height={120} width={175} src={LogoImg} alt='yveslioneldiomande' />
+
+          </Link>
+
+       <div onClick={()=> Toggle()} className={`items-center z-50 h-10 w-10 cursor-pointer rounded-full flex justify-center border-2 border-${show ? "black" : "white"}`} >
+      
+      { Navshow ? <AiOutlineClose size={20} color='black'/> : <AiOutlineMenu size={20} color='white'/>}
+      
+       </div>
+     </nav>
       {/* Drawer  */}
       <div className={` ${show ?"absolute" : "hidden"} absolute  h-screen  bg-black w-full z-50 bg-opacity-80 flex justify-end`} >
         {/* Project Box */}
