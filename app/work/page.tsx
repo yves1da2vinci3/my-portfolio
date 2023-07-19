@@ -136,7 +136,7 @@ function Page() {
 <p className=' text-black font-semibold  ' >Website</p>
 
     </div>
-<Link className=' text-black my-2 font-semibold text-sm  ' target="_blank" href={Project ? Project.openLink :"https://piggment.co"}  >{Project ? Project.openLink :"https://piggment.co"}</Link>
+<Link className=' text-black my-2 font-semibold text-sm  ' target="_blank" href={Project ? Project.openLink.substring(0,200) :"https://piggment.co"}  >{Project ? Project.openLink.substring(0,180) :"https://piggment.co"}</Link>
     {/* Github */}
     <div className='flex mt-3 gap-x-1 flex-row items-center'>
       <AiFillGithub />
@@ -156,9 +156,9 @@ function Page() {
       </div>
       {/* Main */}
       <h1 className='text-6xl mt-10 font-semibold'>Projets.</h1>
-      <div className='flex-row overflow-x-scroll flex gap-x-6 mt-10 items-center'>
+      <div className='flex-row  flex gap-x-4 md:gap-x-6 mt-10 items-center'>
         {types.map(type=> (
-          <div  onClick={()=> setSelectedId(type.id)} key={type.id} className={`cursor-pointer justify-center p-3 w-[3rem]  md:w-[6rem] transition duration-[500ms] ease-in  flex items-center h-[2.4rem] ${selectedId=== type.id ? "bg-black" : ""} rounded-lg`} ><p className={` text-[1rem] md:text-lg transition duration-[300ms] ease-in-out ${selectedId === type.id ? "text-white font-semibold text-2xl " : "text-gray-500 text-xl"}`} > {type.title}</p></div>
+          <div  onClick={()=> setSelectedId(type.id)} key={type.id} className={`cursor-pointer justify-center p-3 w-[4mdrem]  md:w-[6rem] transition duration-[500ms] ease-in  flex items-center h-[2.4rem] ${selectedId=== type.id ? "bg-black" : ""} rounded-lg`} ><p className={` text-[1rem] md:text-lg transition duration-[300ms] ease-in-out ${selectedId === type.id ? "text-white font-semibold text-2xl " : "text-gray-500 text-xl"}`} > {type.title}</p></div>
         ))}
       </div>
       <div className='w-full md:w-[52rem] flex md:flex-row flex-col items-center flex-wrap justify-center md:justify-between pb-4  mt-8 h-auto gap-4 '>
