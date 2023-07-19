@@ -72,10 +72,11 @@ export default function Home() {
                 <p>Mon CV</p>
               </li>
               <li className='hover:text-blue-600 cursor-pointer'>
-                <p>Mes Projets</p>
+                <Link href="/work">Mes Projets</Link>
               </li>
               <li className='hover:text-blue-600 cursor-pointer'>
-                <p>A propos de moi</p>
+                <a href='/about'><p>A propos de moi</p></a>
+                
               </li>
               <li>
               <div className=' h-[4rem]   py-3 bg-white w-[12rem] self-center   flex-row justify-between items-center px-2 flex' >
@@ -104,7 +105,7 @@ export default function Home() {
        </div>
      </nav>
      {/* Informations and image */}
-     <div ref={ref1} className='flex-1 mt-5 flex flex-col md:grid md:grid-cols-2'>
+     <div ref={ref1} id='home' className='flex-1 mt-5 flex flex-col md:grid md:grid-cols-2'>
       {/* Information */}
       
         
@@ -154,12 +155,12 @@ export default function Home() {
      </div>
      </div>
      {/* About */}
-     <div ref={ref2} className='min-h-screen md:grid flex flex-col  p-4 gap-y-20 justify-evenly md:grid-cols-2 bg-[#F9F9F9]'>
+     <div ref={ref2} id='about' className='min-h-screen md:grid flex flex-col  p-4 gap-y-20 justify-evenly md:grid-cols-2 bg-[#F9F9F9]'>
       {/* Design */}
        <div className=' flex md:grid md:grid-rows-2  items-center justify-center'>
         <div className='self-center flex-col w-[30rem] flex gap-y-4' >
         <motion.h1 initial={{ opacity : 0, translateY : -120 }} animate={ animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2}} className='text-6xl font-semibold text-blue-500'>Design</motion.h1>
-        <motion.p initial={{ opacity : 0, translateY : 140 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }} className='tracker-tighter'>m probably not the typical designer positioned behind an Illustrator artboard adjusting pixels, but I design. Immersed in stylesheets tweaking font sizes and contemplating layouts is where ll find me  m committed to creating fluent user experiences while staying fashionable.</motion.p>
+        <motion.p initial={{ opacity : 0, translateY : 140 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }} className='tracker-tighter'>{`Je ne suis probablement pas le designer typique positionné derrière une planche Illustrator en ajustant les pixels, mais je conçois. Plongé dans les feuilles de style en ajustant les tailles de police et en envisageant les mises en page, c'est là que vous me trouverez. Je m'engage à créer des expériences utilisateur fluides tout en restant élégant.`}</motion.p>
        </div>
        {/* Image */}
        <motion.div initial={{ translateX : -133 }} 
@@ -182,13 +183,13 @@ export default function Home() {
 
         <div className='self-center flex-col w-[30rem] flex gap-y-4' >
         <motion.h1 initial={{ opacity : 0, translateY : 110 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }} className='text-6xl font-semibold text-blue-500'>Engeenering</motion.h1>
-        <motion.p initial={{ opacity : 0, translateY : -130 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }}  className='tracker-tighter'>In building JavaScript applications, I am equipped with just the right tools, and can absolutely function independently of them to deliver fast, resilient solutions optimized for scale — performance and scalabilty are priorities on my radar.</motion.p>
+        <motion.p initial={{ opacity : 0, translateY : -130 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }}  className='tracker-tighter'>{`Je suis un ingénieur intermédiaire hautement compétent en React, React Native, DSA, design système, Golang, Python, JavaScript et Node.js. Ma passion pour la résolution de problèmes complexes et ma solide compréhension des concepts clés me permettent de développer des applications performantes et robustes. Je possède une expérience approfondie dans la conception de bases de données et la gestion des données, ce qui me permet de créer des solutions efficaces et évolutives. Je suis à l'aise à la fois en travaillant de manière autonome et en collaboration avec une équipe. Toujours à l'affût des dernières tendances et meilleures pratiques, je suis constamment en train d'apprendre et de me mettre à jour pour offrir des résultats exceptionnels. Je suis prêt à relever de nouveaux défis et à contribuer à des projets novateurs qui repoussent les limites technologique`}</motion.p>
        </div>
        {/* Image */}
         </div>
      </div>
      {/* Footer */}
-     <motion.section ref={ref3} initial={{ opacity : 0, translateY : 100 }} animate={animate3 ? { opacity : 1 ,translateY : 0} : {}} transition={{ 
+     <motion.section id='contact' ref={ref3} initial={{ opacity : 0, translateY : 100 }} animate={animate3 ? { opacity : 1 ,translateY : 0} : {}} transition={{ 
       duration : 2,
      
      }} className="py-12 md:py-20 bg-coolGray-50">
@@ -244,9 +245,9 @@ export default function Home() {
                 Discutez avec vous
               </span>
               <p className="text-lg text-coolGray-500 mb-1">
-                Lorem Ipsum is simply dummy text of the
+                par email
               </p>
-              <span className="text-lg font-medium">contact@example.com</span>
+              <span className="text-lg font-medium">yves.lionel.diomande@gmail.com</span>
             </div>
           </div>
           <div className="sm:flex mb-10">
@@ -271,9 +272,9 @@ export default function Home() {
                 Appelez nous
               </span>
               <p className="text-lg text-coolGray-500 mb-1">
-                Lorem Ipsum is simply dummy text of the
+                sur
               </p>
-              <span className="text-lg font-medium">+48 291 821 114</span>
+              <span className="text-lg font-medium">+225 014 117 596</span>
             </div>
           </div>
           <div className="sm:flex">
@@ -302,13 +303,13 @@ export default function Home() {
                 Visitez nous
               </span>
               <p className="text-lg text-coolGray-500 mb-1">
-                Lorem Ipsum is simply dummy text of the
+               en
               </p>
               <span className="block mb-0.5 text-lg font-medium">
-                6811 Benjamin Franklin Drive,
+                {`Cote d'ivoire`}
               </span>
               <span className="text-lg font-medium">
-                Suite 170 Columbia, MD 21046
+               Abidjan
               </span>
             </div>
           </div>
@@ -365,9 +366,10 @@ export default function Home() {
                 </svg>
               </span>
               <select className="relative block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-transparent border border-coolGray-400 rounded-full appearance-none outline-none">
-                <option >What can we help you with?</option>
-                <option>Marketing</option>
-                <option>Selling</option>
+                <option >Comment puis je vous aider</option>
+                <option>Formation</option>
+                <option>Service</option>
+                <option>Autre</option>
               </select>
             </div>
             <textarea
@@ -410,31 +412,24 @@ initial={{ opacity : 0, translateY : 100 }} animate={animate4 ?  { opacity : 1 ,
         <div className="w-full md:w-auto p-3 md:px-6">
           <a
             className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-            href="#"
+            href="home"
           >
            Accueil
           </a>
         </div>
+      
         <div className="w-full md:w-auto p-3 md:px-6">
-          <a
+          <Link
             className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-            href="#"
-          >
-            Experiences
-          </a>
-        </div>
-        <div className="w-full md:w-auto p-3 md:px-6">
-          <a
-            className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-            href="#"
+            href="/work"
           >
             Projects
-          </a>
+          </Link>
         </div>
         <div className="w-full md:w-auto p-3 md:px-6">
           <a
             className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-            href="#"
+            href="about"
           >
             A propos
           </a>
@@ -443,7 +438,7 @@ initial={{ opacity : 0, translateY : 100 }} animate={animate4 ?  { opacity : 1 ,
         <div className="w-full md:w-auto p-3 md:px-6">
           <a
             className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-            href="#"
+            href="contact"
           >
             Contact
           </a>
