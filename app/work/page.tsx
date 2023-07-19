@@ -94,7 +94,7 @@ function Page() {
         <div className={`${animtation ?"translate-x-[0rem]" : "translate-x-[120rem]"} h-full transition duration-[400ms] ease-in-out delay-[10ms] flex bg-[#FFFDFC] w-[100%] md:w-[30%] flex-col`}>
 
 {/* Project Inofr */}
-<div className={`flex-1   overflow-y-scroll p-3 `} >
+<div className={`flex-1   overflow-y-scroll overflow-x-hidden p-3 `} >
   {/* Pet */}
   <div className='flex items-center px-4 border-b-gray-300 border-b-2 justify-between h-[3rem] ' >
     <IoChevronBackCircleOutline onClick={()=> setShow(false)} size={30} className='cursor-pointer'  color='gray' />
@@ -136,7 +136,7 @@ function Page() {
 <p className=' text-black font-semibold  ' >Website</p>
 
     </div>
-<Link className=' text-black my-2 font-semibold text-sm  ' target="_blank" href={Project ? Project.openLink.substring(0,200) :"https://piggment.co"}  >{Project ? Project.openLink.substring(0,180) :"https://piggment.co"}</Link>
+<Link className=' text-black my-2 font-semibold text-sm  ' target="_blank" href={Project ? Project.openLink :"https://piggment.co"}  >{Project ? Project.openLink.substring(0,100) :"https://piggment.co"}</Link>
     {/* Github */}
     <div className='flex mt-3 gap-x-1 flex-row items-center'>
       <AiFillGithub />
