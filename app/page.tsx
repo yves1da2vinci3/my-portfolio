@@ -64,7 +64,7 @@ export default function Home() {
   }, [inView4]);
 
   return (
-    <main className="flex h-auto flex-col relative overflow-x-hidden flex-1 bg-white  p-2">
+    <main className="flex h-auto flex-col relative  flex-1 bg-white  p-2">
       {/* Menu */}
       <div className={`flex h-[19rem] transition duration-[700ms] ease-in-out delay-[100ms] fixed   flex-row top-7  ${show ?"translate-x-[74rem]" : "translate-x-[120rem]"}   z-40 bg-white w-56 items-center justify-center border border-coolGray-400 `}>
              <ul className='gap-y-5 flex-1 flex flex-col p-4'>
@@ -121,7 +121,7 @@ export default function Home() {
         <div className='gap-3 flex pl-8 flex-col self-center w-full '>
         <h1 className='text-5xl font-bold '>Bonjour,</h1>
        <h1 className='text-5xl font-bold '>Je suis <span className='text-blue-500'>Yves Lionel Diomande</span></h1>
-       <h1 className='text-5xl font-bold '>Mid Level engeneer </h1>
+       <h1 className='text-5xl font-bold '>Mid Level engineer </h1>
         </div>
        
 
@@ -159,8 +159,8 @@ export default function Home() {
       {/* Design */}
        <div className=' flex md:grid md:grid-rows-2  items-center justify-center'>
         <div className='self-center flex-col w-[30rem] flex gap-y-4' >
-        <motion.h1 initial={{ opacity : 0, translateY : -120 }} animate={ animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2}} className='text-6xl font-semibold text-blue-500'>Design</motion.h1>
-        <motion.p initial={{ opacity : 0, translateY : 140 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }} className='tracker-tighter'>{`Je ne suis probablement pas le designer typique positionné derrière une planche Illustrator en ajustant les pixels, mais je conçois. Plongé dans les feuilles de style en ajustant les tailles de police et en envisageant les mises en page, c'est là que vous me trouverez. Je m'engage à créer des expériences utilisateur fluides tout en restant élégant.`}</motion.p>
+        <motion.h1 initial={{ opacity : 0, translateY : -120 }} animate={ animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2}} className='text-4xl md:text-6xl font-semibold text-blue-500'>Design</motion.h1>
+        <motion.p initial={{ opacity : 0, translateY : 140 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }} className='text-sm md:text-base tracker-tighter'>{`Je ne suis probablement pas le designer typique positionné derrière une planche Illustrator en ajustant les pixels, mais je conçois. Plongé dans les feuilles de style en ajustant les tailles de police et en envisageant les mises en page, c'est là que vous me trouverez. Je m'engage à créer des expériences utilisateur fluides tout en restant élégant.`}</motion.p>
        </div>
        {/* Image */}
        <motion.div initial={{ translateX : -133 }} 
@@ -182,8 +182,8 @@ export default function Home() {
        </motion.div>
 
         <div className='self-center flex-col w-[30rem] flex gap-y-4' >
-        <motion.h1 initial={{ opacity : 0, translateY : 110 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }} className='text-6xl font-semibold text-blue-500'>Engeenering</motion.h1>
-        <motion.p initial={{ opacity : 0, translateY : -130 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }}  className='tracker-tighter'>{`Je suis un ingénieur intermédiaire hautement compétent en React, React Native, DSA, design système, Golang, Python, JavaScript et Node.js. Ma passion pour la résolution de problèmes complexes et ma solide compréhension des concepts clés me permettent de développer des applications performantes et robustes. Je possède une expérience approfondie dans la conception de bases de données et la gestion des données, ce qui me permet de créer des solutions efficaces et évolutives. Je suis à l'aise à la fois en travaillant de manière autonome et en collaboration avec une équipe. Toujours à l'affût des dernières tendances et meilleures pratiques, je suis constamment en train d'apprendre et de me mettre à jour pour offrir des résultats exceptionnels. Je suis prêt à relever de nouveaux défis et à contribuer à des projets novateurs qui repoussent les limites technologique`}</motion.p>
+        <motion.h1 initial={{ opacity : 0, translateY : 110 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }} className='text-4xl md:text-6xl font-semibold text-blue-500'>Engineering</motion.h1>
+        <motion.p initial={{ opacity : 0, translateY : -130 }} animate={animate2 ? { opacity :1 ,translateY : 0} : {}} transition={{ type : "spring", duration : 2 }}  className='tracker-tighter md:text-base text-sm'>{`Je suis un ingénieur intermédiaire hautement compétent en React, React Native, DSA, design système, Golang, Python, JavaScript et Node.js. Ma passion pour la résolution de problèmes complexes et ma solide compréhension des concepts clés me permettent de développer des applications performantes et robustes. Je possède une expérience approfondie dans la conception de bases de données et la gestion des données, ce qui me permet de créer des solutions efficaces et évolutives. Je suis à l'aise à la fois en travaillant de manière autonome et en collaboration avec une équipe. Toujours à l'affût des dernières tendances et meilleures pratiques, je suis constamment en train d'apprendre et de me mettre à jour pour offrir des résultats exceptionnels. Je suis prêt à relever de nouveaux défis et à contribuer à des projets novateurs qui repoussent les limites technologique`}</motion.p>
        </div>
        {/* Image */}
         </div>
@@ -410,12 +410,12 @@ initial={{ opacity : 0, translateY : 100 }} animate={animate4 ?  { opacity : 1 ,
       </a>
       <div className="flex flex-wrap justify-center -mx-3 lg:-mx-6">
         <div className="w-full md:w-auto p-3 md:px-6">
-          <a
+          <Link
             className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-            href="home"
+            href="#home"
           >
            Accueil
-          </a>
+          </Link>
         </div>
       
         <div className="w-full md:w-auto p-3 md:px-6">
@@ -427,21 +427,21 @@ initial={{ opacity : 0, translateY : 100 }} animate={animate4 ?  { opacity : 1 ,
           </Link>
         </div>
         <div className="w-full md:w-auto p-3 md:px-6">
-          <a
+          <Link
             className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-            href="about"
+            href="#about"
           >
             A propos
-          </a>
+          </Link>
         </div>
         
         <div className="w-full md:w-auto p-3 md:px-6">
-          <a
+          <Link
             className="inline-block text-lg md:text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-            href="contact"
+            href="#contact"
           >
             Contact
-          </a>
+          </Link>
         </div>
        
       </div>

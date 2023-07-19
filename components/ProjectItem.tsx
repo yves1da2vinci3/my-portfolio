@@ -16,7 +16,7 @@ function ProjectItem({ setShow ,project,setProject}: ProjectItemProp): JSX.Eleme
         setShow()
        }
   return (
-    <div onClick={()=> setElement() } className='w-[25rem] relative h-[20rem] group cursor-pointer rounded-lg overflow-hidden ' >
+    <div onClick={()=> setElement() } className='w-[23rem] md:w-[25rem] relative h-[20rem] group cursor-pointer rounded-lg overflow-hidden ' >
     {/* Image */}
     <div className='absolute h-[20rem] flex-1'>
     <Image src={project.preview} alt='projet' className='z-20 flex justify-center  object-cover h-full  ' />
