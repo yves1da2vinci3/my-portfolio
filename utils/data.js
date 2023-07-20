@@ -157,7 +157,7 @@ const projects = [
       description: "Cette application bancaire permet les paiements de voir les statistiques",
       technologies: ["React Native", "Context Api", "React-native-charts"],
       githubLink: "https://github.com/",
-      openLink: "https://firebasestorage.googleapis.com/v0/b/myportfolio-527e2.appspot.com/o/VideoServices%2FSimulator%20Screen%20Recording%20-%20iPhone%2013%20-%202023-01-19%20at%2013.02.35.mp4?alt=media&token=d087e097-854a-4e04-9f93-76bb5b4ddd83",
+      openLink: "https://firebasestorage.googleapis.com/v0/b/myportfolio-527e2.appspot.com/o/VideoServices%2Fubank.mp4?alt=media&token=258597ec-01e5-468d-b897-d8ef629c5508",
     },
     {
       title: "GreenDeli",
