@@ -14,6 +14,7 @@ import Microtic from '../public/PreviewImages/microtic.png'
 import Bolstarr from '../public/PreviewImages/bolstar.png'
 import BolstarUI from '../public/PreviewImages/BolstarUI.png'
 import djamo from '../public/PreviewImages/djamo.png'
+import Blog from '../public/PreviewImages/blogPreview.png'
 const projects = [
     {
       title: "Houmklo",
@@ -168,6 +169,17 @@ const projects = [
       technologies: ["React native", "React native elements", "React-native-maps"],
       githubLink: "https://github.com/",
       openLink: "https://firebasestorage.googleapis.com/v0/b/myportfolio-527e2.appspot.com/o/VideoServices%2FSimulator%20Screen%20Recording%20-%20iPhone%2013%20-%202023-01-16%20at%2022.58.02.mp4?alt=media&token=3efd2437-1295-4ff4-b652-da1480f41d41",
+    },
+    {
+      title: "Blog App",
+      type: "mobile",
+      projectType : 2,
+      preview: Blog,
+      subtitle: "Un Linkedin pour designers ",
+      description: "L'application permet aux designers d'avoir une plateforme mobile ou ils peuvent discuter et partager leur creation sans souci",
+      technologies: ["React native", "Twrnc", "Expo Icons"],
+      githubLink: "https://github.com/",
+      openLink: "https://firebasestorage.googleapis.com/v0/b/myportfolio-527e2.appspot.com/o/VideoServices%2FSimulator%20Screen%20Recording%20-%20iPhone%2013%20-%202023-07-20%20at%2000.11.15.mp4?alt=media&token=5991444d-689f-4829-a77f-28c252f76570",
     },
     {
       title: "Djamo",
