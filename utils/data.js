@@ -15,6 +15,7 @@ import Bolstarr from '../public/PreviewImages/bolstar.png'
 import BolstarUI from '../public/PreviewImages/BolstarUI.png'
 import djamo from '../public/PreviewImages/djamo.png'
 import Blog from '../public/PreviewImages/blogPreview.png'
+import Quizz from '../public/PreviewImages/onLineApp.png'
 const projects = [
     {
       title: "Houmklo",
@@ -114,6 +115,17 @@ const projects = [
       technologies: ["HTML", "CSS", "JS","LocalStorage"],
       githubLink: "https://github.com/",
       openLink: "example",
+    },
+    {
+      title: "Online Multiplayer QuizzApp",
+      type: "web",
+      projectType : 1,
+      preview: Quizz,
+      subtitle: "Un site de quizz en ligne ",
+      description: "Il s'agit d'une application web ou vous pouvez inviter vos amis a jouer ou etre invite un jeu de question reponse ,avec Timer et un classement en fin de partie  ",
+      technologies: ["ReactJs", "Express", "Socket.io","LocalStorage","Tailwindcss","Mantine"],
+      githubLink: "https://github.com/",
+      openLink: "https://onlinequizzapp.netlify.app/",
     },
     {
       title: "Tiktok",
