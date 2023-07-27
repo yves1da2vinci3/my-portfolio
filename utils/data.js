@@ -16,6 +16,7 @@ import BolstarUI from '../public/PreviewImages/BolstarUI.png'
 import djamo from '../public/PreviewImages/djamo.png'
 import Blog from '../public/PreviewImages/blogPreview.png'
 import Quizz from '../public/PreviewImages/onLineApp.png'
+import meet from '../public/PreviewImages/meet.png'
 const projects = [
     {
       title: "Houmklo",
@@ -126,6 +127,17 @@ const projects = [
       technologies: ["ReactJs", "Express", "Socket.io","LocalStorage","Tailwindcss","Mantine"],
       githubLink: "https://github.com/",
       openLink: "https://onlinequizzapp.netlify.app/",
+    },
+    {
+      title: "Conference App ",
+      type: "web",
+      projectType : 1,
+      preview: meet,
+      subtitle: "Un site inspire de google ",
+      description: "Il s'agit d'une application web ou vous pouvez tenir vos reunions ,possede la fonctionalites de reaction emojo,enregistrer en temps reel le meet et bien dautres  ",
+      technologies: ["ReactJs", "Express", "Socket.io","LocalStorage","Tailwindcss","Mantine"],
+      githubLink: "https://github.com/",
+      openLink: "https://mygooglemeet.netlify.app/",
     },
     {
       title: "Tiktok",
