@@ -38,7 +38,7 @@ const projects = [
       description: "Dans ce forum ,nous retrouvons exactement les memes fonctionalites que medium.com a savoir la creation(avec un nouveau editeur code specialement pour loccasion) et la lecture d'article,et des addicitifs comme la possibilite de poster des projets realisés",
       technologies: ["Nextjs", "Tailwindcss", "Golang","Mongodb","JWT","Gofiber"],
       githubLink: "https://github.com/",
-      openLink: "example",
+      openLink: "https://choseyourcamp.netlify.app",
     },
     {
       title: "MusicStreaming",
