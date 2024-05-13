@@ -17,6 +17,8 @@ import djamo from '../public/PreviewImages/djamo.png'
 import Blog from '../public/PreviewImages/blogPreview.png'
 import Quizz from '../public/PreviewImages/onLineApp.png'
 import meet from '../public/PreviewImages/meet.png'
+import alia from '../public/PreviewImages/alia.png'
+
 const projects = [
     {
       title: "Houmklo",
@@ -74,15 +76,15 @@ const projects = [
       openLink: "https://webwhatsappclone.netlify.app/",
     },
     {
-      title: "Microtic",
+      title: "Alia Landing page",
       type: "web",
       projectType : 1,
-      preview:Microtic,
-      subtitle: "Un site vitrine d'une entrerprise de prestation de service",
-      description: "Il s'agit du site vitrine d'une entrerprise de MICROTIC base a san pedro",
-      technologies: ["Reactjs", "Tailwindcss", "React-router"],
+      preview:alia,
+      subtitle: "Landing page presentant un service d'un IA ",
+      description: "Il s'agit du site vitrine d'un SASS qui permet aux acteurs de loi en afrique francophone de senquerir des textes de lois",
+      technologies: ["Reactjs", "CSS",,'mantine UI'],
       githubLink: "https://github.com/",
-      openLink: "https://microtic.net/",
+      openLink: "https://alia-legal.com/",
     },
     {
       title: "ResidenceIT",
