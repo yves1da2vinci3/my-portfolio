@@ -18,6 +18,7 @@ import Blog from '../public/PreviewImages/blogPreview.png'
 import Quizz from '../public/PreviewImages/onLineApp.png'
 import meet from '../public/PreviewImages/meet.png'
 import alia from '../public/PreviewImages/alia.png'
+import convserseWithMe from '../public/PreviewImages/converseWithMe.jpeg'
 
 const projects = [
     {
@@ -173,6 +174,17 @@ const projects = [
       technologies: ["React Native", "ContextApi", "AsyncStorage","React native elements","ExpressJs","mongoDB","Vicotory Native"],
       githubLink: "https://github.com/",
       openLink: "https://firebasestorage.googleapis.com/v0/b/myportfolio-527e2.appspot.com/o/VideoServices%2FSimulator%20Screen%20Recording%20-%20iPhone%2013%20-%202023-07-19%20at%2002.32.19.mp4?alt=media&token=74be90e9-82f0-4a97-b999-f1f5948c6fad",
+    },
+    {
+      title: "ConverseWithMe",
+      type: "mobile",
+      projectType : 2,
+      preview: convserseWithMe,
+      subtitle: "Une application d'apprentissage de langue",
+      description: "Cette application  permet d'apprendre une langue soit par une communication avec IA qui vous entretient sur des multiples sujets de conversation ou communnicant avec des gens a travers le monde",
+      technologies: ["React Native", "Context Api", "React-native-charts","Nativewind"],
+      githubLink: "https://github.com/",
+      openLink: "https://firebasestorage.googleapis.com/v0/b/myportfolio-527e2.appspot.com/o/VideoServices%2FconverseWithMe.mp4?alt=media&token=56ec3204-4f33-4efb-9ef2-fb74dbda8c82",
     },
     {
       title: "UBank",
