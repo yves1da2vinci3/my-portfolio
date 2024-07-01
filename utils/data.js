@@ -46,9 +46,9 @@ const projects = [
     type: "web",
     projectType: 1,
     preview: meet,
-    subtitle: "Un site inspire de google ",
+    subtitle: "Un site inspire de google meet ",
     description:
-      "Il s'agit d'une application web ou vous pouvez tenir vos reunions ,possede la fonctionalites de reaction emojo,enregistrer en temps reel le meet et bien dautres  ",
+      "Il s'agit d'une application web ou vous pouvez tenir vos reunions en temps reel,elle possede la fonctionalité de reaction emoji,levez les mains  et bien dautres  ",
     technologies: [
       "ReactJs",
       "Express",
@@ -56,6 +56,7 @@ const projects = [
       "LocalStorage",
       "Tailwindcss",
       "Mantine",
+      "LiveKit",
     ],
     githubLink: "https://github.com/",
     openLink: "https://mygooglemeet.netlify.app/",
