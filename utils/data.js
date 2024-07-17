@@ -97,7 +97,7 @@ const projects = [
       "Gofiber",
     ],
     githubLink: "https://github.com/",
-    openLink: "https://choseyourcamp.netlify.app",
+    openLink: "https://choseyour-camp.vercel.app/articles",
   },
 
   {
