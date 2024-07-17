@@ -210,6 +210,28 @@ const projects = [
     openLink: "https://houmklodesign.netlify.app/",
   },
   {
+    title: "Fixit",
+    type: "mobile",
+    projectType: 2,
+    preview: service,
+    subtitle: "Une application pour les prestataires de services",
+    description:
+      "Cette Application met en relation les prestataires de services et les clients ,elle est muni d'un systeme de notification ,de messagerie instantee,de voir l'evolution de nos paiments recues et l'evolution de la demande de notre offre etc",
+    technologies: [
+      "React Native",
+      "ContextApi",
+      "AsyncStorage",
+      "React native elements",
+      "ExpressJs",
+      "mongoDB",
+      "Vicotory Native",
+      "Firebase",
+    ],
+    githubLink: "https://github.com/",
+    openLink:
+      "https://firebasestorage.googleapis.com/v0/b/myportfolio-527e2.appspot.com/o/VideoServices%2FSimulator%20Screen%20Recording%20-%20iPhone%2013%20-%202023-07-19%20at%2002.32.19.mp4?alt=media&token=74be90e9-82f0-4a97-b999-f1f5948c6fad",
+  },
+  {
     title: "Tiktok",
     type: "mobile",
     projectType: 2,
@@ -229,7 +251,7 @@ const projects = [
       "https://firebasestorage.googleapis.com/v0/b/myportfolio-527e2.appspot.com/o/VideoServices%2Ffd.mp4?alt=media&token=08d8a70f-012d-462e-b960-dfca7ca33fa7",
   },
   {
-    title: "WhatsApp",
+    title: "MessageMe",
     type: "mobile",
     projectType: 2,
     preview: WhatsApp,
@@ -241,32 +263,18 @@ const projects = [
       "ContextApi",
       "AsyncStorage",
       "React native elements",
+      "FastAPI",
+      "PostgresQL",
+      "Minio",
+      "Prometheus",
+      "Grafana",
+      "Redis",
     ],
     githubLink: "https://github.com/",
     openLink:
       "https://firebasestorage.googleapis.com/v0/b/myportfolio-527e2.appspot.com/o/VideoServices%2FSimulator%20Screen%20Recording%20-%20iPhone%2013%20-%202023-07-17%20at%2000.33.04.mp4?alt=media&token=df5eae76-0fd2-4e57-943d-66851d35733a",
   },
-  {
-    title: "ServiceProviderApp",
-    type: "mobile",
-    projectType: 2,
-    preview: service,
-    subtitle: "Une application pour les prestataires de services",
-    description:
-      "Cette Application met en relation les prestataires de services et les clients ,elle est muni d'un systeme de notification ,de messagerie instantee,de voir l'evolution de nos paiments recues et l'evolution de la demande de notre offre etc",
-    technologies: [
-      "React Native",
-      "ContextApi",
-      "AsyncStorage",
-      "React native elements",
-      "ExpressJs",
-      "mongoDB",
-      "Vicotory Native",
-    ],
-    githubLink: "https://github.com/",
-    openLink:
-      "https://firebasestorage.googleapis.com/v0/b/myportfolio-527e2.appspot.com/o/VideoServices%2FSimulator%20Screen%20Recording%20-%20iPhone%2013%20-%202023-07-19%20at%2002.32.19.mp4?alt=media&token=74be90e9-82f0-4a97-b999-f1f5948c6fad",
-  },
+
   {
     title: "ConverseWithMe",
     type: "mobile",
