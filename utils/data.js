@@ -68,7 +68,7 @@ const projects = [
     preview: Quizz,
     subtitle: "Un site de quizz en ligne ",
     description:
-      "Il s'agit d'une application web ou vous pouvez inviter vos amis a jouer ou etre invite un jeu de question reponse ,avec Timer et un classement en fin de partie  ",
+      "Il s'agit d'une application web ou vous pouvez inviter vos amis a jouer ou etre invite un jeu de question reponse ,avec Timer et un classement en fin de partie,les questions sont généres par l'IA  ",
     technologies: [
       "ReactJs",
       "Express",
@@ -76,6 +76,7 @@ const projects = [
       "LocalStorage",
       "Tailwindcss",
       "Mantine",
+      "Mistral Api",
     ],
     githubLink: "https://github.com/",
     openLink: "https://onlinequizzapp.netlify.app/",
