@@ -39,7 +39,7 @@ const projects = [
       "uuid-ossp",
     ],
     githubLink: "https://github.com/",
-    openLink: "https://transactional-clone-frontend.vercel.app/",
+    openLink: "https://designmypdf.vercel.app/",
   },
   {
     title: "Conference App ",
