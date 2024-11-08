@@ -89,16 +89,9 @@ const projects = [
     subtitle: "Un forum pour développeurs",
     description:
       "Dans ce forum ,nous retrouvons exactement les memes fonctionalites que medium.com a savoir la creation(avec un nouveau editeur code specialement pour loccasion) et la lecture d'article,et des addicitifs comme la possibilite de poster des projets realisés",
-    technologies: [
-      "Nextjs",
-      "Tailwindcss",
-      "Golang",
-      "Mongodb",
-      "JWT",
-      "Gofiber",
-    ],
+    technologies: ["Nextjs", "Tailwindcss", "Nestjs", "Mongodb", "JWT"],
     githubLink: "https://github.com/",
-    openLink: "https://choseyour-camp.vercel.app/articles",
+    openLink: "https://chose-your-camp-frontend.vercel.app/articles",
   },
 
   {
