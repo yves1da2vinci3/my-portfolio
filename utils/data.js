@@ -311,6 +311,7 @@ const projects = [
       "PostgresQL",
       "MINIO",
       "OpenAI",
+      "Langchain",
     ],
     githubLink: "https://github.com/",
     openLink:
